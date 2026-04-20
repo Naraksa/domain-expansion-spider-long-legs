@@ -352,5 +352,31 @@ footer {
         font-size: 14px;
         padding: 20px;
     }
+    /*=========================================
+   Mobile Devices (max-width: 600px)
+  =========================================*/
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #menu-btn {
+        width: 40px;
+    }
+
+    nav ul {
+        width: 100%;       /* Stretch across the whole screen */
+        left: 0;           /* Pin to the left edge */
+        border-radius: 0;  /* Remove the curved corner */
+    }
+    
+    .text-over-video {
+        top: 15%; 
+    }
 }
+
 
