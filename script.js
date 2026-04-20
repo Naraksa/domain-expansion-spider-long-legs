@@ -20,7 +20,27 @@ if (typingText) {
 
     window.onload = typeWriter;
 }
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const menuBtn = document.getElementById('menu-btn');
+    const navMenu = document.querySelector('nav ul');
 
+    // Toggle the 'active' class on the menu when the button is clicked
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+
+    // Optional: Close the menu if the user clicks anywhere else on the screen
+    document.addEventListener('click', (event) => {
+        if (!menuBtn.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+
+});
 // ==================
 // Mobile menu toggle
 // ==================
