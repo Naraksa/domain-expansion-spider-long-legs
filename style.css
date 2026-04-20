@@ -257,7 +257,7 @@ footer {
         font-size: 18px;
     }
 
-    nav ul li.dropdown {
+    nav ul li.active {
         flex-direction: column;
     }
     
@@ -368,6 +368,10 @@ footer {
         width: 100%;       /* Stretch across the whole screen */
         left: 0;           /* Pin to the left edge */
         border-radius: 0;  /* Remove the curved corner */
+    }
+
+    nav ul li.active {
+        flex-direction: column;
     }
     
     .text-over-video {
