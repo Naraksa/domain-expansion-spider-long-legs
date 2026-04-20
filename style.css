@@ -170,7 +170,6 @@ main {
     background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(41, 11, 163));
     color: white;
     padding: 80px 20px;
-    text-align: center;
 }
 
 .highlight h2 {
@@ -181,9 +180,6 @@ main {
 .highlight p {
     font-size: 24px;
     margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .spider-btn, .region-btn {
@@ -229,15 +225,17 @@ footer {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Snaps exactly to the bottom of the header */
-        right: 0;
-        width: 200px; 
+        top: 100%;
+        left: 0;              /* Pins menu to the left edge */
+        width: 100%;          /* Stretches menu across the whole screen */
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease-in-out;
-        background-image: linear-gradient(to bottom, rgb(15, 5, 35), rgb(0, 0, 0));
-        box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.6); 
-        border-bottom-left-radius: 15px; 
+        /* Made the gradient slightly lighter/purple so it doesn't look like a void */
+        background-image: linear-gradient(to bottom, rgb(41, 11, 163), rgb(15, 5, 35));
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6); 
+        border-radius: 0;     
+        z-index: 1000;
     }
 
     nav ul.active {
@@ -257,7 +255,7 @@ footer {
         font-size: 18px;
     }
 
-    nav ul li.active {
+    nav ul li.dropdown {
         flex-direction: column;
     }
     
@@ -307,7 +305,7 @@ footer {
     }
 
     .text-over-video {
-        top: 15%; /* Push higher up on smaller screens so it doesn't clip */
+        top: 15%; 
     }
 
     .typing-text {
@@ -352,31 +350,4 @@ footer {
         font-size: 14px;
         padding: 20px;
     }
-    header {
-        padding: 15px 20px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    #menu-btn {
-        width: 40px;
-    }
-
-    nav ul {
-        width: 100%;       /* Stretch across the whole screen */
-        left: 0;           /* Pin to the left edge */
-        border-radius: 0;  /* Remove the curved corner */
-    }
-
-    nav ul li.active {
-        flex-direction: column;
-    }
-    
-    .text-over-video {
-        top: 15%; 
-    }
 }
-
-
