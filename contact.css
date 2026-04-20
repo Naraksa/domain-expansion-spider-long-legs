@@ -1,4 +1,8 @@
 /* contact page css */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+
 .contact-section h2 {
     font-size: 64px;
     color: white;
@@ -147,4 +151,71 @@ form button:disabled {
 #reset-btn:hover {
     border-color: white;
     background: rgba(255, 255, 255, 0.1);
+}
+
+}
+
+/* =========================================
+   Responsive Media Queries
+   ========================================= */
+
+/* Tablets & Smaller Laptops (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .contact-section h2 {
+        font-size: 48px;
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    .contact-section p {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    form {
+        /* Prevents the form from touching the absolute edges of the screen */
+        width: 90%; 
+        max-width: 400px;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .contact-section h2 {
+        font-size: 36px;
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+    .contact-section p {
+        font-size: 16px;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Slightly scale down form elements for smaller screens */
+    form input,
+    form textarea {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    #success-msg {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    
+    #success-msg p {
+        font-size: 16px;
+    }
 }
